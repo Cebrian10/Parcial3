@@ -41,4 +41,53 @@ public class ArticulosDB {
         }
         return null;
     }
+
+    public int GuardarArticulos(Articulos articulo){
+        int resultado = 0;
+        try {
+            Statement stm = cn.createStatement();
+            String query = "insert into articulos values('"
+            +articulo.getFoto()+"','"
+            +articulo.getBailesT()+"','"
+            +articulo.getDescripcion()+"')";
+
+            resultado = stm.executeUpdate(query);
+
+            return resultado;
+        } catch (Exception e) {
+            int x = 1;
+        }
+        return resultado;
+    }
+
+    public int ActualizarArticulos(Articulos articulo){
+        int resultado = 0;
+     /*    try {
+            Statement stm = cn.createStatement();
+            String query = "update articulos set BailesT = 'Conguito' Where BailesT = 'Congo'";
+            String query = "insert into articulos values('"
+            +articulo.getFoto()+"','"
+            +articulo.getBailesT()+"','"
+            +articulo.getDescripcion()+"')";
+
+            resultado = stm.executeUpdate(query);
+
+            return resultado;
+        } catch (Exception e) {
+            int x = 1;
+        }*/
+        return resultado;
+    }
+
+    public int EliminarProducto(String bailT){
+        int resultado = 0;
+        try {
+            Statement stm = cn.createStatement();
+            String query = "Delete from articulos where BailesT = '"+bailT+"'";
+        } catch (Exception e) {
+            int x = 1;
+        }
+        return resultado;
+    }
+
 }
