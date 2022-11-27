@@ -160,7 +160,7 @@
     padding: 10px;
     background-color: #5555;
     position: relative;
-    top: 90px;
+    top: 200px;
     text-align: center;
   }
 
@@ -173,7 +173,7 @@
   #testimonials {
     padding: 5rem 0;
     position: relative;
-    top: 90px;
+    top: 135px;
   }
 
   .testimonial-title {

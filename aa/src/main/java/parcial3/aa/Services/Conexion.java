@@ -10,8 +10,8 @@ public class Conexion {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
             String connectionUrl = "jdbc:sqlserver://localhost:1433;"
             + "databaseName=parcial3;"
-            + "user=Cebrian10;"
-            + "password=Lizmariham507;"
+            + "user=sa;"
+            + "password=4321;"
             + "trustServerCertificate=true";
             Connection con = DriverManager.getConnection(connectionUrl);
             return con;
